@@ -167,8 +167,8 @@ function trace(states){const lv=LEVELS[current],counts=lv.starts.length,paths=[]
 function checkSolved(){return trace(angles).full}
 function waferLayout(){
  const n=LEVELS[current].plates.length;
- const space=Math.max(200,H-52),height=clamp(space/(n*1.48),47,89);
- const gap=clamp((space-n*height)/(n+1),11,90);
+ const space=Math.max(160,H-100),height=clamp(space/(n*1.28),34,88);
+ const gap=clamp((space-n*height)/Math.max(1,n-1),8,82);
  const total=n*height+(n-1)*gap;
  const start=(H-total)/2;
  const xs=[.18,.39,.61,.82].map(v=>v*W);
